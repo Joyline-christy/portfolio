@@ -367,92 +367,57 @@ section h2 {
     color: #fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 360px) {
 
-    /* ===== HERO SECTION FIX ===== */
+    /* ===== HERO FIX (NO EXTRA SPACE) ===== */
     .hero {
-      display: block;            /* kill flex */
-      min-height: auto;          /* remove tall height */
-      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px;
+                   /* 🔥 controls spacing */
     }
   
     .hero-left {
       text-align: center;
-      margin-bottom: 12px;
     }
   
     .hero-left h1 {
-      font-size: 30px;
-      margin-bottom: 6px;
-    }
-    .image_hero{
-        width:250px;
-        border-radius:50%;
-        object-fit:cover;
-        border:none;
-        transition: transform 0.3s;
-
+      font-size: 28px;
+      margin-bottom: 4px;
     }
   
     .junior {
       font-size: 18px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
   
     .tagline p {
       font-size: 14px;
+      margin: 3px 0;
       line-height: 1.4;
-      margin: 4px 0;
     }
   
     .btn {
-      margin-top: 10px;
+      margin-top: 8px;
     }
   
+    /* IMAGE FIX */
     .hero-right {
-      width: 100%;
-      margin-top: 12px;
-      text-align: center;
+      margin: 0;              /* 🔥 removes gap */
+      padding: 0;
     }
   
-    .hero-right img {
-      width: 180px;
-      height: auto;
+    .image_hero {
+      width: 160px;           /* 🔥 smaller = less space */
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
     }
   
-    /* ===== SECTIONS ===== */
-    section h2 {
-      font-size: 26px;
-      text-align: center;
-    }
-  
-    .about,
-    .experience,
-    .edu-skill,
-    .latest-work,
-    .contact {
-      padding: 60px 20px;
-    }
-  
-    /* ===== SKILLS ===== */
-    .skills-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    /* ===== PROJECTS ===== */
-    .projects-grid {
-      justify-content: center;
-    }
-  
-    .project-card {
-      width: 100%;
-    }
-  
-    /* ===== CONTACT ===== */
-    .contact-cards {
-      justify-content: center;
-    }
   }
+  
   
   
 
