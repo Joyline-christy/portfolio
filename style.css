@@ -34,7 +34,7 @@ body {
     line-height: 1.2;
 }
 
-.hero-left h2 {
+.junior {
     font-size: 28px;
     color: #ff6b2c;
     margin-bottom: 20px;
@@ -293,9 +293,12 @@ section h2 {
 
 .contact-cards {
     display: flex;
+    justify-content: center;   /* 👈 center horizontally */
+    align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-}
+  }
+  
 
 .contact-card {
     background: #f9f9f9;
@@ -305,6 +308,11 @@ section h2 {
     text-align: center;
     transition: 0.3s;
 }
+.contact-card {
+    width: 230px;
+    text-align: center;
+  }
+  
 
 .contact-card i {
     font-size: 30px;
@@ -359,36 +367,92 @@ section h2 {
     color: #fff;
 }
 
-/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+
+    /* ===== HERO SECTION FIX ===== */
     .hero {
-        flex-direction: column;
-        padding: 40px 20px;
-        text-align: center;
+      display: block;            /* kill flex */
+      min-height: auto;          /* remove tall height */
+      padding: 24px 16px;
     }
-    .hero-left, .hero-right {
-        width: 100%;
+  
+    .hero-left {
+      text-align: center;
+      margin-bottom: 12px;
     }
+  
+    .hero-left h1 {
+      font-size: 30px;
+      margin-bottom: 6px;
+    }
+    .image_hero{
+        width:250px;
+        border-radius:50%;
+        object-fit:cover;
+        border:none;
+        transition: transform 0.3s;
+
+    }
+  
+    .junior {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  
+    .tagline p {
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 4px 0;
+    }
+  
+    .btn {
+      margin-top: 10px;
+    }
+  
+    .hero-right {
+      width: 100%;
+      margin-top: 12px;
+      text-align: center;
+    }
+  
     .hero-right img {
-        width: 90%;
-        max-width: 300px;
+      width: 180px;
+      height: auto;
     }
-
-    .edu-skill-content, .projects-grid, .contact-cards {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
+  
+    /* ===== SECTIONS ===== */
+    section h2 {
+      font-size: 26px;
+      text-align: center;
     }
-
+  
+    .about,
+    .experience,
+    .edu-skill,
+    .latest-work,
+    .contact {
+      padding: 60px 20px;
+    }
+  
+    /* ===== SKILLS ===== */
     .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
-
+  
+    /* ===== PROJECTS ===== */
+    .projects-grid {
+      justify-content: center;
+    }
+  
     .project-card {
-        width: 100%;
+      width: 100%;
     }
+  
+    /* ===== CONTACT ===== */
+    .contact-cards {
+      justify-content: center;
+    }
+  }
+  
+  
 
-    .contact-card {
-        width: 80%;
-    }
-}
