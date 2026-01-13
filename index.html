@@ -10,40 +10,58 @@
   />
 </head>
 <body>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-   <div class="content">
-    <div class="hero-left">
-      <div>
-        <h1>I'm Joyline Christy J</h1>
-      <h1 class="junior">Web Developer</h1>
-
+  <nav class="navbar">
+    <div class="nav-container">
+      <div></div>
+  
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
       </div>
-      <div class="tagline">
-        <p>Interested in web application development</p>
-        <p>Skilled in frontend and backend basics</p>
-        <p>Passionate about continuous learning</p>
-      </div>
-      <div><a href="./assets/joyline christy j _ RESUME.pdf" class="btn">Download Resume</a>
-      </div>
-       </div>
-
-    <div class="hero-right">
-     <div> <img class="image_hero" src="./assets/DSCN1676.JPG" alt="Profile Image">
-     </div>
     </div>
-   </div>
+  </nav>
+  
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="content">
+  
+      <div class="hero-left">
+        <h1>I'm Joyline Christy J</h1>
+        <h1 class="junior">Web Developer</h1>
+  
+        <div class="tagline">
+          <p>Interested in web application development</p>
+          <p>Skilled in frontend and backend basics</p>
+          <p>Passionate about continuous learning</p>
+        </div>
+  
+        <a href="./assets/joyline christy j _ RESUME.pdf" class="btn">
+          Download Resume
+        </a>
+      </div>
+  
+      <div class="hero-right">
+        <img class="image_hero" src="./assets/DSCN1676.JPG" alt="Profile Image">
+      </div>
+  
+    </div>
   </section>
+  
 
   <!-- ABOUT SECTION -->
-  <section class="about">
+  <section id="about" class="about">
     <div class="about-container">
       <h2>About Me</h2>
       <p>
-        Motivated Junior Software Developer with a strong foundation in programming
+        Motivated web Developer with a strong foundation in programming
         fundamentals and hands-on experience in building web applications using
-        HTML, CSS, JavaScript, React, Node.js, and MongoDB.
+        HTML, CSS, JavaScript, React, Node.js, Express.js and MongoDB.
       </p>
       <p>
         Skilled in writing clean, maintainable code, collaborating with
@@ -68,11 +86,9 @@
         <h4>Scopetech Software Solutions, Madurai</h4>
 
         <p>
-          Completed a 2.5-month internship focused on web development, where I
-          worked on building and styling web pages using HTML, CSS, and JavaScript.
-          Gained hands-on experience in frontend development, understanding
-          project workflows, and collaborating with team members in a
-          professional environment.
+          Completed a 2.5-month internship in web development, learning frontend technologies such as HTML, CSS, JavaScript, and React, along with backend basics using Node.js, Express.js, and MongoDB.
+          Built small projects and practiced implementing concepts such as responsive design, API integration, and basic CRUD operations to strengthen my understanding of full-stack development.
+
         </p>
       </div>
 
@@ -80,12 +96,13 @@
   </section>
 
   <!-- EDUCATION & SKILLS SECTION -->
-  <section class="edu-skill">
+  <section id="skills" class="edu-skill">
     <div class="edu-skill-header">
       <h2>Education & Skills</h2>
     </div>
+    
     <hr />
-
+<br>
     <div class="edu-skill-content">
 
       <!-- LEFT: EDUCATION -->
@@ -157,7 +174,7 @@
     </div>
   </section>
 <!-- LATEST WORK SECTION -->
-<section class="latest-work">
+<section id="projects" class="latest-work">
   <div class="latest-work-container">
     <h2>Latest Work</h2>
     <div class="projects-grid">
@@ -180,7 +197,7 @@
   </div>
 </section>
 <!-- CONTACT SECTION -->
-<section class="contact">
+<section id="contact" class="contact">
   <div class="contact-container">
     <h2>Contact Me</h2>
     
@@ -235,6 +252,13 @@
     </div>
   </div>
 </footer>
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
 
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
 </body>
 </html>
